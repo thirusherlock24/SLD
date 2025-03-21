@@ -1,16 +1,15 @@
 import { useEffect, useState } from "react";
+import img1 from "../Images/1.jpeg";
+import img2 from "../Images/2.jpeg";
+import img3 from "../Images/3.jpeg";
+import img4 from "../Images/4.jpeg";
+import img5 from "../Images/5.jpeg";
+import img6 from "../Images/6.jpeg";
+import img7 from "../Images/7.jpeg";
+import img8 from "../Images/8.jpeg";
+import img9 from "../Images/9.jpeg";
 
-const images = [
-  "/images/1.jpeg",
-  "/images/2.jpeg",
-  "/images/3.jpeg",
-  "/images/4.jpeg",
-  "/images/5.jpeg",
-  "/images/6.jpeg",
-  "/images/7.jpeg",
-  "/images/8.jpeg",
-  "/images/9.jpeg",
-];
+const images = [img1, img2, img3, img4, img5, img6, img7, img8, img9];
 
 function Slider() {
   const [index, setIndex] = useState(0);
@@ -18,7 +17,7 @@ function Slider() {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % images.length);
-    }, 3000); // change every 3s
+    }, 3000);
     return () => clearInterval(interval);
   }, []);
 
